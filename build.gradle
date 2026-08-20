@@ -1,3 +1,20 @@
-plugins {
-    id 'com.android.application' version '8.2.2' apply false
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.nanoai.app'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.nanoai.app'
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+
+    // Совместимость с Java-кодом и JDK 17 в Android Code Studio
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_8
+        targetCompatibility JavaVersion.VERSION_8
+    }
+    }
 }
